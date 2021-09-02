@@ -83,6 +83,9 @@ module.exports = {
           // Please change this to your repo.
           editUrl: 'https://github.com/web3-storage/web3.storage/edit/main/packages/docs/',
           routeBasePath: '/',
+          remarkPlugins: [
+            require('remark-docusaurus-tabs'),
+          ]
         },
         blog: false,
         theme: {
