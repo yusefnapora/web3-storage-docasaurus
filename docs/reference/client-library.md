@@ -9,6 +9,8 @@ To use the JavaScript client library for Web3.Storage, you must first [obtain a 
 
 The client library automatically packs your uploads into a content addressible archive (CAR) for uploading to the Web3.Storage service, which [stores](#store-files) data as blocks prefixed with the [_content identifier_ (CID)](../concepts/content-addressing.md#cids-location-independent-globally-unique-keys) derived from a cryptographic hash of the data. You can then use a file's CID to [retrieve](#retrieve-files) it.
 
+This page covers the core functionality of the JavaScript client. See the [JavaScript utility libraries page](./js-utilities.md) for some additional packages that may be useful when working with Web3.Storage.
+
 :::warning Minimum requirements
 While we recommend that you install the latest _stable_ version of the following software, you must have _at least_:
 

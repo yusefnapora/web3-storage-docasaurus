@@ -16,7 +16,7 @@ If you're using another language, see the [HTTP API reference][reference-http] f
 Uploading data to Web3.Storage using the JavaScript client library requires a free API token, which in turn requires a Web3.Storage account. If you already have an account and a token, read on. If not, have a look at the [quickstart guide][quickstart-guide] to get up and running in just a few minutes.
 
 
-::: danger CAUTION
+:::danger CAUTION
 All data uploaded to Web3.Storage is available to anyone who requests it using the correct CID. Do not store any private or sensitive information in an unencrypted form using Web3.Storage.
 :::
 
@@ -40,9 +40,8 @@ The Web3.Storage client's [`put` method][reference-js-put] accepts an array of [
 
 There are a few different ways of creating `File` objects available, depending on your platform.
 
-:::: tabs
-
-::: tab Browser
+<!--tabs-->
+### Browser
 
 In the browser, you can use a [file input element][mdn-file-input] to allow the user to select files for upload:
 
@@ -52,9 +51,7 @@ You can also manually create `File` objects using the native `File` constructor 
 
 <<<@/code-snippets/how-to/platform-browser.js#makeFileObjects
 
-:::
-
-::: tab Node.js
+### Node.js
 
 In Node.js, the `web3.storage` package exports some helpful utility functions from the [`files-from-path` module](https://www.npmjs.com/package/files-from-path) that allow you to easily read `File` objects from the local file system. The `getFilesFromPath` helper asynchronously returns an array of `File`s that you can use directly with the `put` client method:
 
@@ -66,12 +63,9 @@ You can also manually create `File` objects by importing a Node.js implementatio
 
 <<<@/code-snippets/how-to/platform-node.js#makeFileObjects
 
-:::
+<!--/tabs-->
 
-::::
-
-
-::: tip 
+:::tip 
 **When uploading multiple files, try to give each file a unique name.** All the files in a `put` request will be bundled into one content archive, and linking to the files inside is much easier if each file has a unique, human-readable name.
 :::
 
@@ -81,7 +75,7 @@ Once you have an array of `File`s, uploading is simple:
 
 <<<@/code-snippets/how-to/index.js#storeFiles
 
-::: warning IMPORTANT
+:::warning IMPORTANT
 Deleting files from the Web3.Storage site's [Files page][site-files] will remove them from the file listing for your account, but that doesn't prevent nodes on the [decentralized storage network][concepts-decentralized-storage] from retaining copies of the data indefinitely. Do not use Web3.Storage for data that may need to be permanently deleted in the future.
 :::
 
@@ -138,7 +132,7 @@ You can also get more information about the status of your data. See the [query 
 [reference-js-put]: ../reference/client-library.md#store-files
 [reference-js-put-car]: ../reference/client-library.md#store-car-files
 
-[quickstart-guide]: ../intro.md#quickstart
+[quickstart-guide]: ../intro.mdx#quickstart
 [howto-retrieve]: ./retrieve.md
 [howto-query]: ./query.md
 [howto-car-files]: ./work-with-car-files.md

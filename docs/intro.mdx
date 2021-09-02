@@ -85,6 +85,10 @@ You can use the Web3.Storage site to upload files, but it's also quick and easy 
 All data uploaded to Web3.Storage is available to anyone who requests it using the correct CID. Do not store any private or sensitive information in an unencrypted form using Web3.Storage.
 :::
 
+import CodeBlock from '@theme/CodeBlock';
+import PutFiles from '!!raw-loader!../code-snippets/quickstart/put-files.js';
+import PackageJson from '!!raw-loader!../code-snippets/quickstart/package.json.txt';
+
 1. Create a folder for this quickstart project, and move into that folder:
 
     ```shell
@@ -94,15 +98,11 @@ All data uploaded to Web3.Storage is available to anyone who requests it using t
 
 1. Create a file called `put-files.js` and paste in the following code:
 
-    import CodeBlock from '@theme/CodeBlock';
-    import PutFiles from '!!raw-loader!../code-snippets/quickstart/put-files.js';
-
     <CodeBlock className="language-js">{PutFiles}</CodeBlock>
-
 
 1. Create another file called `package.json` and paste in the following code:
 
-    <<< @/code-snippets/quickstart/package-example.json
+    <CodeBlock className="language-js">{PackageJson}</CodeBlock>
 
 1. Save both files, and then run `npm install` from your project folder:
 
@@ -139,7 +139,7 @@ Now that you've got your script ready to go, you just need to run it in your ter
     node put-files.js --token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGZFYTRhODlFNUVhRjY5YWI4QUZlZUU3MUE5OTgwQjFGQ2REZGQzNzIiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2MjY5Njk3OTY1NTQsIm5hbWUiOiJib25maXJlIn0.0S9Ua2FWEAZSwaemy92N7bW8ancRUtu4XtLS3Gy1ouA ~/hello.txt
     ```
 
-    ::: tip Multiple files
+    :::tip Multiple files
     You can upload a whole directory full of files at once by giving the script the path to a local directory. You can also upload multiple files by passing in more than one file path when you run the script.
     :::
 

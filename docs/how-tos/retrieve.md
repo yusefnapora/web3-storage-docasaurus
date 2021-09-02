@@ -25,7 +25,7 @@ You can use an IPFS gateway to view a list of all the files in that directory fr
 
 If you want to link directly to a file within that directory, just add the file path after the CID portion of the link. For example: [bafybeidd2gyhagleh47qeg77xqndy2qy3yzn4vkxmk775bg2t5lpuy7pcu.ipfs.dweb.link/not-distributed.jpg](https://bafybeidd2gyhagleh47qeg77xqndy2qy3yzn4vkxmk775bg2t5lpuy7pcu.ipfs.dweb.link/not-distributed.jpg) could be used as a shareable link for your new favorite wallpaper.
 
-::: tip
+:::tip
 Your [Files page](https://web3.storage/files/) on Web3.Storage includes IPFS gateway links to all the content you've uploaded, so if you're looking to link to one of your own files, you don't even have to create a gateway URL.
 :::
 
@@ -84,9 +84,8 @@ ipfs get bafybeidd2gyhagleh47qeg77xqndy2qy3yzn4vkxmk775bg2t5lpuy7pcu/youareanons
 
 Sometimes you may need to just download a specific file to your computer using the command line. Unix-based operating systems, like Linux and macOS, can use curl. Windows users can use Powershell.
 
-::::tabs
-
-:::tab Linux
+<!--tabs-->
+#### Linux
 
 1. Open a terminal window.
 1. Use `curl` to download your file:
@@ -109,9 +108,8 @@ Sometimes you may need to just download a specific file to your computer using t
     curl https://bafybeie2bjap32zi2yqh5jmpve5njwulnkualcbiszvwfu36jzjyqskceq.ipfs.dweb.link/example.txt -o ~/output-file.txt
     ```
 
-:::
 
-:::tab macOS
+#### macOS
 
 1. Open a terminal window.
 1. Use `curl` to download your file:
@@ -134,9 +132,7 @@ Sometimes you may need to just download a specific file to your computer using t
     curl https://bafybeie2bjap32zi2yqh5jmpve5njwulnkualcbiszvwfu36jzjyqskceq.ipfs.dweb.link/example.txt -o ~/output-file.txt
     ```
 
-:::
-
-:::tab Windows
+#### Windows
 
 1. Open a Powershell window.
 1. Use `Invoke-WebRequest` to download your file:
@@ -159,8 +155,8 @@ Sometimes you may need to just download a specific file to your computer using t
     ```powershell
     Invoke-WebRequest -Uri "https://bafybeie2bjap32zi2yqh5jmpve5njwulnkualcbiszvwfu36jzjyqskceq.ipfs.dweb.link/example.txt" -OutFile "C:\Users\Laika\Desktop\output-file.txt"
     ```
-:::
-::::
+
+<!--/tabs-->
 
 ## Next steps
 
@@ -170,7 +166,7 @@ You can also use the client library to get more information about the status of 
 
 <!-- internal links -->
 [reference-js]: ../reference/client-library.md
-[quickstart-guide]: ../intro.md#quickstart
+[quickstart-guide]: ../intro.mdx#quickstart
 [concepts-content-addressing]: ../concepts/content-addressing.md
 [howto-store]: ./store.md
 [howto-query]: ./query.md

@@ -56,7 +56,7 @@ What do all those fields mean? Here's a summary:
 - `pins` contains an array of objects describing the IPFS nodes that have [pinned][ipfs-docs-pinning] the data, making it available for fast retrieval using the IPFS network.
 - `deals` contains an array of objects describing the Filecoin storage providers that have made [storage deals][fil-docs-deals]. These storage providers have committed to storing the data for an agreed period of time.
 
-::: tip Want more details about storage?
+:::tip Want more details about storage?
 The `Upload` objects returned by the `list` method include some basic status information about how the data is stored on IPFS and Filecoin. For more details, including the identity of the storage providers hosting your data, you can [query an upload's status][howto-query] using the `cid`.
 :::
 

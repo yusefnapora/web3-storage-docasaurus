@@ -35,7 +35,7 @@ The client object's `status` method accepts a CID string and returns a JSON obje
 
 <<<@/code-snippets/how-to/index.js#query-status
 
-::: warning IMPORTANT 
+:::warning IMPORTANT 
 **Remember to check the return value!** If you ask for the status of a CID that Web3.Storage doesn't know about, the `status` method will return `undefined` instead of a status object. Make sure to check that a return value exists before trying to use it, as we're doing above with the `if (status)` conditional statement.
 :::
 
@@ -128,7 +128,7 @@ If you haven't yet explored in depth how to store data using Web3.Storage, check
 
 To learn in greater detail how to fetch your data using the Web3.Storage client, or directly from IPFS using a gateway or the IPFS command line, see the [how-to guide on retrieval][howto-retrieve].
 
-[quickstart]: ../intro.md#quickstart
+[quickstart]: ../intro.mdx#quickstart
 [concepts-decentralized-storage]: ../concepts/decentralized-storage.md
 [howto-store]: ./store.md
 [howto-retrieve]: ./retrieve.md
