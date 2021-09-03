@@ -10,6 +10,7 @@ module.exports = {
         'how-tos/list',
         'how-tos/query',
         'how-tos/work-with-car-files',
+        'how-tos/generate-api-token',
         'how-tos/troubleshooting',
       ]
     },
