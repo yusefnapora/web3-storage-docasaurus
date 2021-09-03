@@ -3,6 +3,10 @@ title: Retrieve
 description: Learn how to retrieve data stored using Web3.Storage in this quick how-to guide.
 ---
 
+<!-- imports for code snippets -->
+import CodeSnippet from '../../src/components/CodeSnippet'
+import howtoSource from '!!raw-loader!../../code-snippets/how-to/index.js'
+
 # How to retrieve data from Web3.Storage
 
 In this how-to guide, **you'll learn several methods for retrieving data from Web3.Storage.**
@@ -43,12 +47,11 @@ npm install web3.storage
 
 Use the following code to create a Web3.Storage client:
 
-<<<@/code-snippets/how-to/index.js#makeStorageClient
+<CodeSnippet lang="js" src={howtoSource} region="makeStorageClient" />
 
 Once you have a client, you can call `client.get`, passing in a CID string:
 
-<<<@/code-snippets/how-to/index.js#retrieve-basics
-
+<CodeSnippet lang="js" src={howtoSource} region="retrieve-basics" />
 
 ### The `Web3Response` object
 
@@ -58,7 +61,7 @@ The [`files` method][reference-js-web3response] returns an array of `Web3File` o
 
 Here's the example from above, now with the code to unpack and inspect the files in the response:
 
-<<<@/code-snippets/how-to/index.js#retrieve-unpack-files
+<CodeSnippet lang="js" src={howtoSource} region="retrieve-unpack-files" />
 
 :::tip
 Another option is to use the array of `unixFs` objects provided by the `unixFsIterator()` method to iterate through your files. While in the vast majority of cases you'll want to use the `files()` method outlined above, existing IPFS users may prefer interacting with `unixFs` objects if they have existing code or tooling that supports it. For more details, see the [JavaScript client library reference][reference-js].

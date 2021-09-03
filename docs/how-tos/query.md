@@ -3,6 +3,10 @@ title: Query
 description: Learn how to query Web3.Storage in this quick how-to guide.
 ---
 
+<!-- imports for code snippets -->
+import CodeSnippet from '../../src/components/CodeSnippet'
+import howtoSource from '!!raw-loader!../../code-snippets/how-to/index.js'
+
 # How to query Web3.Storage
 
 In this how-to guide, you'll learn how to **query Web3.Storage for information about your files.**
@@ -23,7 +27,7 @@ npm install web3.storage
 
 To create a `Web3Storage` client object, we need to pass an access token into the [constructor][reference-js-constructor]:
 
-<<<@/code-snippets/how-to/index.js#makeStorageClient
+<CodeSnippet lang="js" src={howtoSource} region="makeStorageClient" />
 
 :::tip
 Don't have an access token? Get your Web3.Storage API token in just a few minutes using the instructions in the [quickstart guide.][quickstart]
@@ -33,7 +37,7 @@ Don't have an access token? Get your Web3.Storage API token in just a few minute
 
 The client object's `status` method accepts a CID string and returns a JSON object with information about the upload. Here's how to include it in your project:
 
-<<<@/code-snippets/how-to/index.js#query-status
+<CodeSnippet lang="js" src={howtoSource} region="query-status" />
 
 :::warning IMPORTANT 
 **Remember to check the return value!** If you ask for the status of a CID that Web3.Storage doesn't know about, the `status` method will return `undefined` instead of a status object. Make sure to check that a return value exists before trying to use it, as we're doing above with the `if (status)` conditional statement.

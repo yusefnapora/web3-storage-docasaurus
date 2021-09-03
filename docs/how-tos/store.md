@@ -3,6 +3,12 @@ title: Store
 description: Learn how to store your data on the decentralized web with Web3.Storage.
 ---
 
+<!-- imports for code snippets -->
+import CodeSnippet from '../../src/components/CodeSnippet'
+import howtoSource from '!!raw-loader!../../code-snippets/how-to/index.js'
+import platformBrowserSource from '!!raw-loader!../../code-snippets/how-to/platform-browser.js'
+import platformNodeSource from '!!raw-loader!../../code-snippets/how-to/platform-node.js'
+
 # How to store data using Web3.Storage
 
 In this how-to guide, **you'll learn how to store data programmatically for your development projects using the Web3.Storage JavaScript client**. This includes making your data available on the decentralized [IPFS](https://ipfs.io) network with persistent long-term storage provided by [Filecoin](https://filecoin.io) — all for free.
@@ -32,7 +38,7 @@ npm install web3.storage
 
 First we need to create a `Web3.Storage` client object, passing in an API token to its [constructor][reference-js-constructor]:
 
-<<<@/code-snippets/how-to/index.js#makeStorageClient
+<CodeSnippet lang="js" src={howtoSource} region="makeStorageClient" />
 
 ## Preparing files for upload
 
@@ -45,23 +51,23 @@ There are a few different ways of creating `File` objects available, depending o
 
 In the browser, you can use a [file input element][mdn-file-input] to allow the user to select files for upload:
 
-<<<@/code-snippets/how-to/platform-browser.js#getFiles
+<CodeSnippet lang="js" src={platformBrowserSource} region="getFiles" />
 
 You can also manually create `File` objects using the native `File` constructor provided by the browser runtime. This is useful when you want to store data created by your application, instead of files from the user's computer.
 
-<<<@/code-snippets/how-to/platform-browser.js#makeFileObjects
+<CodeSnippet lang="js" src={platformBrowserSource} region="makeFileObjects" />
 
 ### Node.js
 
 In Node.js, the `web3.storage` package exports some helpful utility functions from the [`files-from-path` module](https://www.npmjs.com/package/files-from-path) that allow you to easily read `File` objects from the local file system. The `getFilesFromPath` helper asynchronously returns an array of `File`s that you can use directly with the `put` client method:
 
-<<<@/code-snippets/how-to/platform-node.js#getFiles
+<CodeSnippet lang="js" src={platformNodeSource} region="getFiles" />
 
 If you expect to be loading a lot of large files, you may be better served by the [`filesFromPath` helper](https://github.com/web3-storage/files-from-path#filesfrompath). It reduces memory pressure by `yield`ing `File` objects one by one as they're loaded from disk, instead of loading everything into memory. You can then issue multiple `put` requests to send each file to Web3.Storage.
 
 You can also manually create `File` objects by importing a Node.js implementation of `File` from the `web3.storage` package. This is useful when you want to store data created by your application, instead of files from the user's computer.
 
-<<<@/code-snippets/how-to/platform-node.js#makeFileObjects
+<CodeSnippet lang="js" src={platformNodeSource} region="makeFileObjects" />
 
 <!--/tabs-->
 
@@ -73,7 +79,7 @@ You can also manually create `File` objects by importing a Node.js implementatio
 
 Once you have an array of `File`s, uploading is simple:
 
-<<<@/code-snippets/how-to/index.js#storeFiles
+<CodeSnippet lang="js" src={howtoSource} region="storeFiles" />
 
 :::warning IMPORTANT
 Deleting files from the Web3.Storage site's [Files page][site-files] will remove them from the file listing for your account, but that doesn't prevent nodes on the [decentralized storage network][concepts-decentralized-storage] from retaining copies of the data indefinitely. Do not use Web3.Storage for data that may need to be permanently deleted in the future.
@@ -89,7 +95,7 @@ As each chunk of data is uploaded, the `onStoredChunk` callback gets invoked wit
 
 Here's a simple example of using the callbacks to print the progress of an upload to the console:
 
-<<<@/code-snippets/how-to/index.js#storeWithProgress
+<CodeSnippet lang="js" src={howtoSource} region="storeWithProgress" />
 
 ## Storing IPFS Content Archives
 

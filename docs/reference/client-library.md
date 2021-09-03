@@ -532,6 +532,9 @@ const cid = await client.putCar(car, { onStoredChunk })
 
 [_BlockDecoder_](https://github.com/multiformats/js-multiformats#ipld-codecs-multicodec). Used to specify additional IPLD block decoders which interpret the data in the CAR file  and split it into multiple chunks. Note these are only required if the CAR file was not encoded using the default encoders: `dag-pb`, `dag-cbor` and `raw`.
 
-<<<@/code-snippets/how-to/dag-json.js
+import CodeSnippet from '../../src/components/CodeSnippet'
+import dagJsonSource from '!!raw-loader!../../code-snippets/how-to/dag-json.js'
+
+<CodeSnippet src={dagJsonSource} lang="js" />
 
 :::
