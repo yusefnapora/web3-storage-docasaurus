@@ -1,13 +1,12 @@
 ---
-title: Image gallery
+title: Image gallery example
+sidebar_label: Image gallery
 description: Learn about Web3.Storage by walking through the code for a simple image gallery app that runs entirely in the browser.
 ---
 
 <!-- imports for code snippets -->
 import CodeSnippet from '../../src/components/CodeSnippet'
 import storageJsSource from '!!raw-loader!../../code-snippets/external/example-image-gallery/src/js/storage.js'
-
-# Image gallery example
 
 To demonstrate how to use the Web3.Storage JavaScript library to build an application, we've written a simple image gallery app for uploading your favorite memes and GIFs to the decentralized web.
 

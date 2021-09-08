@@ -1,13 +1,12 @@
 ---
-title: Work with Content Archives
+title: Working with Content Archives
+sidebar_label: Work with Content Archives
 description: Learn how to work with Content Archives of IPLD data.
 ---
 
 <!-- imports for code snippets -->
 import CodeSnippet from '../../src/components/CodeSnippet'
 import dagCborSource from '!!raw-loader!../../code-snippets/how-to/dag-cbor.js'
-
-# Working with Content Archives
 
 When you upload files to Web3.Storage using the [client library][reference-client-library], your data is converted into a graph of data structures, which are then packed into a format called a Content Archive (CAR) before being sent to the Web3.Storage service. 
 

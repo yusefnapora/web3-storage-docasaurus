@@ -1,9 +1,8 @@
 ---
-title: Generate an API token
+title: How to generate an API token
+sidebar_label: Generate an API token
 description: Learn how to get an API token for using Web3.Storage programmatically in this quick how-to guide.
 ---
-
-# How to generate an API token
 
 In this how-to guide, **you'll learn how to generate a Web3.Storage API token** so that you can interact with the service programmatically through the [JavaScript client library](../reference/client-library.md) or using the command line.
 

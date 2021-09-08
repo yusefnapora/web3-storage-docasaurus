@@ -1,5 +1,6 @@
 ---
-title: Store
+title: How to store data using Web3.Storage
+sidebar_label: Store
 description: Learn how to store your data on the decentralized web with Web3.Storage.
 ---
 
@@ -8,8 +9,6 @@ import CodeSnippet from '../../src/components/CodeSnippet'
 import howtoSource from '!!raw-loader!../../code-snippets/how-to/index.js'
 import platformBrowserSource from '!!raw-loader!../../code-snippets/how-to/platform-browser.js'
 import platformNodeSource from '!!raw-loader!../../code-snippets/how-to/platform-node.js'
-
-# How to store data using Web3.Storage
 
 In this how-to guide, **you'll learn how to store data programmatically for your development projects using the Web3.Storage JavaScript client**. This includes making your data available on the decentralized [IPFS](https://ipfs.io) network with persistent long-term storage provided by [Filecoin](https://filecoin.io) — all for free.
 

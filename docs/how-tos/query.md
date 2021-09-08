@@ -1,13 +1,12 @@
 ---
-title: Query
+title: How to query Web3.Storage
+sidebar_label: Query
 description: Learn how to query Web3.Storage in this quick how-to guide.
 ---
 
 <!-- imports for code snippets -->
 import CodeSnippet from '../../src/components/CodeSnippet'
 import howtoSource from '!!raw-loader!../../code-snippets/how-to/index.js'
-
-# How to query Web3.Storage
 
 In this how-to guide, you'll learn how to **query Web3.Storage for information about your files.**
 

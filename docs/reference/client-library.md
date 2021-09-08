@@ -1,9 +1,8 @@
 ---
-title: JavaScript client library
+title: JavaScript client library reference
+sidebar_label: JavaScript client library
 description: Integrate Web3.Storage into your code using the JavaScript client library.
 ---
-
-# JavaScript client library reference
 
 To use the JavaScript client library for Web3.Storage, you must first [obtain a free API token](../how-tos/generate-api-token.md).
 

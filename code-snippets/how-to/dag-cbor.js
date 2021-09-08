@@ -1,6 +1,6 @@
 //#region imports
 import { Web3Storage } from 'web3.storage'
-import { CarReader, CarWriter } from '@ipld/car'
+import { CarReader } from '@ipld/car'
 import { encode } from 'multiformats/block'
 import * as cbor from '@ipld/dag-cbor'
 import { sha256 } from 'multiformats/hashes/sha2'
@@ -13,19 +13,8 @@ async function encodeCborBlock(value) {
 //#endregion encodeCborBlock
 
 //#region makeCar
-async function makeCar(rootCID, ipldBlocks) {
-  // create a new CarWriter, with the given root CID
-  const { writer, out } = CarWriter.create([rootCID])
-
-  // add the blocks to the CAR and close it
-  for (const block of ipldBlocks) {
-    writer.put(block)
-  }
-  writer.close()
-
-  // create a new CarReader we can hand to Web3.Storage.putCar
-  const reader = await CarReader.fromIterable(out)
-  return reader
+async function makeCar (rootCID, ipldBlocks) {
+  return new CarReader(1, [rootCID], ipldBlocks)
 }
 //#endregion makeCar
 

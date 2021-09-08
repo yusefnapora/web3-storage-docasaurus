@@ -1,5 +1,6 @@
 ---
-title: List
+title: How to list files uploaded to Web3.Storage
+sidebar_label: List
 description: Learn how to list the files you've uploaded to Web3.Storage in this quick how-to guide.
 ---
 
@@ -8,7 +9,6 @@ import CodeSnippet from '../../src/components/CodeSnippet'
 import howtoSource from '!!raw-loader!../../code-snippets/how-to/index.js'
 import exampleUpload from '!!raw-loader!../../code-snippets/how-to/example-listing-upload.json.txt'
 
-# How to list files uploaded to Web3.Storage
 In this how-to guide, you'll learn about the different ways that you can **list the files that you've uploaded to Web3.Storage.**
 Once you've [stored some files][howto-store] using Web3.Storage, you'll want to see a list of what you've uplodaded. There are two ways you can do this:
 
