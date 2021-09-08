@@ -4,7 +4,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Web3.Storage Documentation',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Better storage. Better transfers. Better internet.',
   url: 'https://docs.web3.storage',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -13,19 +13,29 @@ module.exports = {
   organizationName: 'web3-storage',
   projectName: 'web3.storage',
   themeConfig: {
+    colorMode: {
+      // respectPrefersColorScheme: true,
+      // disableSwitch: true,
+    },
     navbar: {
-      title: 'Web3.Storage Docs',
+      title: 'Web3.Storage',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Web3.Storage Logo',
         src: 'img/logo.svg',
+        href: 'https://web3.storage',
       },
       items: [
         {
+          label: 'Docs',
           type: 'doc',
           docId: 'intro',
           position: 'right',
-          label: 'Tutorial',
         },
+        {
+          label: 'About',
+          position: 'right',
+          href: 'https://web3.storage/about',
+        }
       ],
     },
     footer: {

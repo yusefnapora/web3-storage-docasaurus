@@ -37,6 +37,9 @@
   --ifm-color-primary-lighter: #fd9184;
   --ifm-color-primary-lightest: #febdb6;
   --ifm-code-font-size: 95%;
+
+  --ifm-background-color: var(--w3storage-background);
+  --ifm-background-surface-color: var(--w3storage-red)
 }
 
 .docusaurus-highlight-code-line {
@@ -50,16 +53,12 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.theme-doc-sidebar-menu {
-  background-color: var(--w3storage-red);
-}
-
 
 /* ================================================================================
    Fonts
    ================================================================================ */
 
-   @font-face {
+@font-face {
     font-family: "Space Grotesk";
     font-weight: 400;
     font-style: normal;
@@ -189,7 +188,7 @@ h4 {
 body {
   @apply antialiased;
 
-  background-color: var(--w3storage-background);
+  /* background-color: var(--w3storage-background); */
   font-family: "Open Sans", sans-serif;
   font-size: 1.125rem;
   line-height: 1.875em;
@@ -216,4 +215,33 @@ body {
 .menu__link--active {
   color: var(--w3storage-yellow);
   /* border-left: 4px solid var(--w3storage-yellow); */
+}
+
+.navbar a {
+  color: var(--w3storage-purple);
+}
+
+/* hack to prevent the external link icon showing on the "About" link */
+.navbar svg[class^="iconExternalLink"] {
+  display: none;
+}
+
+/* Dark mode variants */
+html[data-theme='dark'] {
+  --ifm-background-color: #0b0a45;;
+  --ifm-background-surface-color: var(--w3storage-red-dark)
+}
+
+
+html[data-theme='dark'] body {
+  /* background-color: #0b0a45; */
+  color: #fff;
+}
+
+html[data-theme='dark'] .docs-wrapper {
+  color: #fff;
+}
+
+html[data-theme='dark'] h1, html[data-theme='dark'] h2, html[data-theme='dark'] h3, html[data-theme='dark'] h4 {
+  color: var(--w3storage-yellow);
 }
