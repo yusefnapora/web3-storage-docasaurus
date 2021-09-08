@@ -1,6 +1,8 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+const rehypeLoader = require('./src/rehypeLoader')
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Web3.Storage Documentation',
@@ -39,6 +41,7 @@ module.exports = {
         }
       ],
     },
+
     footer: {
       style: 'dark',
       links: [],
@@ -61,6 +64,9 @@ module.exports = {
           routeBasePath: '/',
           remarkPlugins: [
             require('remark-docusaurus-tabs'),
+          ],
+          rehypePlugins: [
+            rehypeLoader
           ]
         },
         blog: false,
