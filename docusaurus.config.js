@@ -5,8 +5,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Web3.Storage Documentation',
   tagline: 'Dinosaurs are cool',
-  url: 'https://web3.storage',
-  baseUrl: '/docs/',
+  url: 'https://docs.web3.storage',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico', // TODO: replace with web3.storage favicon

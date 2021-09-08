@@ -6,13 +6,36 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  /* the --w3storage colors are taken from the main site tailwind config */
+  --w3storage-yellow: #fde956;
+  --w3storage-yellow-dark: #e5ca02;
+  --w3storage-yellow-light: #fffae6;
+  --w3storage-red: #fc6553;
+  --w3storage-red-dark: #c94332;
+  --w3storage-red-accent: #d7362e;
+  --w3storage-red-light: #fff5f4;
+  --w3storage-pink: #FFE6E5;
+  --w3storage-red-background: #ffe6e5;
+  --w3storage-neutral-red: #fff2ec;
+  --w3storage-green: #37b667;
+  --w3storage-green-dark: #10853c;
+  --w3storage-green-light: #f0fcf4;
+  --w3storage-purple: #171691;
+  --w3storage-black: #1f1817;
+  --w3storage-blue-dark: #0b0a45;
+  --w3storage-blue-desaturated: #2d2d65;
+  --w3storage-blue-desaturated-bright: #3f3f75;
+  --w3storage-blue-bright: #00a7ff;
+  --w3storage-white: #ffffff;
+  --w3storage-background: #fff2ec;
+
+  --ifm-color-primary: #fc6553;
+  --ifm-color-primary-dark: #fb4832;
+  --ifm-color-primary-darker: #fb3922;
+  --ifm-color-primary-darkest: #e61c04;
+  --ifm-color-primary-light: #fd8274;
+  --ifm-color-primary-lighter: #fd9184;
+  --ifm-color-primary-lightest: #febdb6;
   --ifm-code-font-size: 95%;
 }
 
@@ -25,4 +48,172 @@
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.theme-doc-sidebar-menu {
+  background-color: var(--w3storage-red);
+}
+
+
+/* ================================================================================
+   Fonts
+   ================================================================================ */
+
+   @font-face {
+    font-family: "Space Grotesk";
+    font-weight: 400;
+    font-style: normal;
+    src: url("/fonts/space-grotesk/space-grotesk-regular.woff2") format("woff2");
+    src: url("/fonts/space-grotesk/space-grotesk-regular.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    font-style: normal;
+    src: url("/fonts/space-grotesk/space-grotesk-medium.woff2") format("woff2");
+    src: url("/fonts/space-grotesk/space-grotesk-medium.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-style: normal;
+    src: url("/fonts/open-sans/open-sans.woff2") format("woff2");
+    src: url("/fonts/open-sans/open-sans.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-style: normal;
+    src: url("/fonts/open-sans/open-sans-semi-bold.woff2") format("woff2");
+    src: url("/fonts/open-sans/open-sans-semi-bold.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/space-mono/space-mono-regular.woff2") format("woff2");
+  src: url("/fonts/space-mono/space-mono-regular.woff") format("woff");
+  font-display: swap;
+}
+
+/* ================================================================================
+   Typography
+   ================================================================================ */
+
+.space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: normal;
+}
+
+.typography-hero-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 3rem;
+  letter-spacing: normal;
+  font-weight: 500;
+  line-height: 1.4em;
+}
+
+.typography-hero-subtitle {
+  letter-spacing: 0.02em;
+}
+
+.typography-section-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 1.395em;
+}
+
+.typography-body-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.625rem;
+  letter-spacing: normal;
+}
+
+.typography-body-subtitle {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: normal;
+}
+
+.typography-cta {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.9375rem; /* 15px */
+  letter-spacing: 0.02em;
+}
+
+@screen md {
+  .typography-hero-title {
+    font-size: 3.6rem;
+  }
+
+  .typography-section-title {
+    font-size: 2.375rem;
+  }
+}
+
+@screen lg {
+  .typography-hero-title {
+    font-size: 5rem;
+  }
+}
+
+h1 {
+  @apply typography-hero-title;
+}
+
+h2 {
+  @apply typography-section-title;
+}
+
+h3 {
+  @apply typography-body-title;
+  @apply font-bold;
+}
+
+h4 {
+  @apply typography-body-subtitle;
+  @apply font-bold;
+}
+
+body {
+  @apply antialiased;
+
+  background-color: var(--w3storage-background);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.875em;
+  letter-spacing: 0.02em;
+}
+
+.docs-wrapper {
+  color: var(--w3storage-purple)
+}
+
+.menu {
+  background-color: var(--w3storage-red);
+  color: var(--w3storage-black);
+}
+
+.menu__link, .menu__link:not([href]):hover  {
+  color: var(--w3storage-purple);
+}
+
+.menu__link:hover {
+  color: var(--w3storage-yellow);
+}
+
+.menu__link--active {
+  color: var(--w3storage-yellow);
+  /* border-left: 4px solid var(--w3storage-yellow); */
 }
