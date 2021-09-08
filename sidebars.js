@@ -34,13 +34,13 @@ module.exports = {
       type: 'category',
       label: 'Reference',
       items: [
+        'reference/client-library',
+        'reference/js-utilities',
         {
           type: 'link',
           label: 'HTTP API',
-          href: 'https://docs.web3.storage/http-api.html'
+          href: '/http-api/'
         },
-        'reference/client-library',
-        'reference/js-utilities'
       ]
     },
     {
@@ -51,5 +51,4 @@ module.exports = {
       ]
     }
   ],
-
 };

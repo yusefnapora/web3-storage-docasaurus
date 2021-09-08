@@ -38,12 +38,16 @@ module.exports = {
           label: 'About',
           position: 'right',
           href: 'https://web3.storage/about',
+        },
+        {
+          type: 'search',
+          position: 'right',
         }
       ],
     },
 
     footer: {
-      style: 'dark',
+      style: 'light',
       links: [],
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
@@ -75,5 +79,16 @@ module.exports = {
         },
       },
     ],
+    
+    ['redocusaurus', {
+      specs: [{
+        spec: 'static/schema.yml',
+        routePath: '/http-api/',
+      }],
+
+      theme: {
+        primaryColor: '#171691',
+      }
+    }],
   ],
 };
