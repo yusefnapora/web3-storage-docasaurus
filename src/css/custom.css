@@ -89,19 +89,38 @@ body {
   color: var(--w3storage-purple);
 }
 
+.footer a {
+  @apply space-grotesk;
+  color: var(--w3storage-purple);
+}
+
 .navbar__title {
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.75rem;
   font-weight: 500;
 }
 
-/* hack to prevent the external link icon showing on the "About" link */
+/* hack to prevent the external link icon showing in the navbar and footer */
 .navbar svg[class^="iconExternalLink"] {
+  display: none;
+}
+
+.footer svg[class^="iconExternalLink"] {
   display: none;
 }
 
 .icon.outbound {
   display: inline-block;
+}
+
+.footer {
+  background-color: var(--w3storage-red);
+}
+
+ul.footer__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 /* ================================================================================

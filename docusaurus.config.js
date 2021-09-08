@@ -47,9 +47,29 @@ module.exports = {
     },
 
     footer: {
-      style: 'light',
-      links: [],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `<div class="footer--made-with">Made with 💛 by <a href="https://protocol.ai" target="_blank" rel="noopener noreferrer" data-v-13c85306="" data-v-2294af70="">Protocol Labs</a></div>`,
+      links: [
+        {
+          items: [
+            {
+              label: 'Status',
+              href: 'https://web3-storage.statuspage.io/',
+            },
+            {
+              label: 'Terms of Service',
+              href: 'https://web3.storage/about/#terms-of-service',
+            },
+            {
+              label: 'Open an issue',
+              href: 'https://docs.web3.storage/community/help-and-support/#bug-reports-or-feature-requests',
+            },
+            {
+              label: 'Contact us',
+              href: '/community/help-and-support'
+            }
+          ]
+        }
+      ]
     },
     prism: {
       theme: lightCodeTheme,
