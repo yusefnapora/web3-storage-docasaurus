@@ -22,6 +22,7 @@ module.exports = {
       logo: {
         alt: 'Web3.Storage Logo',
         src: 'img/logo.svg',
+        srcDark: 'img/logo-dark.svg',
         href: 'https://web3.storage',
       },
       items: [

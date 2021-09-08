@@ -53,6 +53,87 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+body {
+  @apply antialiased;
+
+  /* background-color: var(--w3storage-background); */
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.875em;
+  letter-spacing: 0.02em;
+}
+
+.docs-wrapper {
+  color: var(--w3storage-purple)
+}
+
+.menu {
+  background-color: var(--w3storage-red);
+}
+
+.menu__link, .menu__link:not([href]):hover  {
+  color: var(--w3storage-purple);
+}
+
+.menu__link:hover {
+  color: var(--w3storage-yellow);
+}
+
+.menu__link--active {
+  color: var(--w3storage-yellow);
+  /* border-left: 4px solid var(--w3storage-yellow); */
+}
+
+.navbar a {
+  @apply space-grotesk;
+  color: var(--w3storage-purple);
+}
+
+.navbar__title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+/* hack to prevent the external link icon showing on the "About" link */
+.navbar svg[class^="iconExternalLink"] {
+  display: none;
+}
+
+/* ================================================================================
+   Dark Mode
+   ================================================================================ */
+
+html[data-theme='dark'] {
+  --ifm-background-color: #0b0a45;;
+  --ifm-background-surface-color: var(--w3storage-red-dark)
+}
+
+
+html[data-theme='dark'] body {
+  /* background-color: #0b0a45; */
+  color: #fff;
+}
+
+html[data-theme='dark'] .docs-wrapper {
+  color: #fff;
+}
+
+html[data-theme='dark'] h1, html[data-theme='dark'] h2, html[data-theme='dark'] h3, html[data-theme='dark'] h4 {
+  color: var(--w3storage-yellow);
+}
+
+html[data-theme='dark'] .menu {
+  background-color: var(--w3storage-red-dark);
+}
+
+html[data-theme='dark'] .menu__link, html[data-theme='dark'] .menu__link:not([href]):hover  {
+  color: var(--w3storage-blue-desaturated);
+}
+
+html[data-theme='dark'] .navbar a {
+  color: var(--w3storage-blue-dark);
+}
 
 /* ================================================================================
    Fonts
@@ -183,65 +264,4 @@ h3 {
 h4 {
   @apply typography-body-subtitle;
   @apply font-bold;
-}
-
-body {
-  @apply antialiased;
-
-  /* background-color: var(--w3storage-background); */
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.875em;
-  letter-spacing: 0.02em;
-}
-
-.docs-wrapper {
-  color: var(--w3storage-purple)
-}
-
-.menu {
-  background-color: var(--w3storage-red);
-  color: var(--w3storage-black);
-}
-
-.menu__link, .menu__link:not([href]):hover  {
-  color: var(--w3storage-purple);
-}
-
-.menu__link:hover {
-  color: var(--w3storage-yellow);
-}
-
-.menu__link--active {
-  color: var(--w3storage-yellow);
-  /* border-left: 4px solid var(--w3storage-yellow); */
-}
-
-.navbar a {
-  color: var(--w3storage-purple);
-}
-
-/* hack to prevent the external link icon showing on the "About" link */
-.navbar svg[class^="iconExternalLink"] {
-  display: none;
-}
-
-/* Dark mode variants */
-html[data-theme='dark'] {
-  --ifm-background-color: #0b0a45;;
-  --ifm-background-surface-color: var(--w3storage-red-dark)
-}
-
-
-html[data-theme='dark'] body {
-  /* background-color: #0b0a45; */
-  color: #fff;
-}
-
-html[data-theme='dark'] .docs-wrapper {
-  color: #fff;
-}
-
-html[data-theme='dark'] h1, html[data-theme='dark'] h2, html[data-theme='dark'] h3, html[data-theme='dark'] h4 {
-  color: var(--w3storage-yellow);
 }
